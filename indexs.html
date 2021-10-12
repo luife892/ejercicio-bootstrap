@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+    <title>Ejercicio 1</title>
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+    <div class="shadow-lg p-3 mb-5 mt-4 bg-body rounded">          
+    <form class="row g-3 needs-validation" novalidate>
+     <div class="col-md-4">
+         <label for="Nombre" class="form-label">Nombre</label>
+        <input id="name" name="nombre" type="text" class="form-control" required>
+        <div class="valid-feedback">Lindo nombre!</div> 
+        <div class="invalid-feedback">Completa el campo!</div> 
+        </div>
+        
+        <div class="col-md-4">    
+            <label for="apellido" class="form-label">Apellido</label>        
+            <input id="apellido" name="apellido" type="text" class="form-control" required>
+            <div class="valid-feedback">Bien!</div> 
+            <div class="invalid-feedback">Y tú apellido?</div> 
+        </div>
+        <div class="col-md-3">
+            <label for="pais">Pais</label>
+            <select name="pais" id="pais" class="form-select" required>
+                <option selected disabled value="">Seleccione...</option>
+                <option>Argentina</option>
+                <option>Colombia</option>
+                <option>Estados Unidos</option>
+                <option>Peru</option>
+                <option>Venezuela</option>
+                </select>
+                <div class="valid-feedback">Un gran país el tuyo,bien!</div> 
+                <div class="invalid-feedback">oye, y de donde eres?</div> 
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    </div>
+    </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+          }else{
+            alert('Tus datos han sido enviados, excelente!')
+         }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+   
+    
+  </body>
+</html>
